@@ -4,8 +4,8 @@ _Welcome to "Hello GitHub Actions"! :wave:_
 
 **_GitHub Actions_ とは？**: GitHub Actions は、チームのソフトウェアワークフローのほぼすべての側面を自動化する柔軟な方法を提供します。テストの自動化、継続的なデプロイ、コードのレビュー、問題の管理やプルリクエストなどを行うことができます。最も良い点は、これらのワークフローはコードとしてリポジトリに保存され、チーム間で簡単に共有して再利用できることです。詳細については、次のリソースを確認してください :
 
-- The GitHub Actions feature page, see [GitHub Actions](https://github.com/features/actions).
-- The "GitHub Actions" user documentation, see [GitHub Actions](https://docs.github.com/actions).
+- GitHub Actions の機能についてはこちらを参照ください [GitHub Actions](https://github.com/features/actions)
+- "GitHub Actions" ドキュメントはこちらを参照ください [GitHub Actions](https://docs.github.com/actions)
 
 **_workflow_ とは？**: ワークフローとは、1つ以上のジョブを実行する構成可能な自動プロセスです。ワークフローは `.github/workflows` ディレクトリ内の特別なファイルで定義され、選択したイベントに基づいて実行されます。この演習では、`pull_request` イベントを使用します。
 
