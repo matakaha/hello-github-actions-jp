@@ -21,7 +21,7 @@ _よくできました! :tada: workflow fileの追加に成功しました!_
 1. ファイルの中身を以下のように更新する :
 
    ```yaml copy
-   name: Welcome コメントの投稿
+   name: Post welcome comment
    on:
      pull_request:
        types: [opened]
@@ -29,7 +29,7 @@ _よくできました! :tada: workflow fileの追加に成功しました!_
      pull-requests: write
    jobs:
      build:
-       name: Post welcome comment
+       name: Welcome コメントの投稿
        runs-on: ubuntu-latest
    ```
 
