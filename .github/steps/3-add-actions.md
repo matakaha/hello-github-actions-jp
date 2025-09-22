@@ -1,19 +1,19 @@
-## Step 3: Add a step to your workflow file
+## Step 3: ワークフローファイルにステップを追加する
 
-_Nice work adding a job to your workflow! :dancer:_
+_ワークフローにジョブを追加することができましたね！ 素晴らしい！ :dancer:_
 
-Workflows have jobs, and jobs have steps. So now we'll add a step to your workflow.
+ワークフローにはジョブが入っていて、ジョブにはステップが入っています。ここではワークフローにステップを追加してみましょう
 
-**What are _steps_?**: Actions steps run - in the order they are specified, from the top down - when a workflow job is processed. Each step must pass for the next step to run.
+**_steps_ とは？**: アクションステップは、ワークフローのジョブが実行されるときに上から下へ１つ１つ順番に実行されます。各々のステップをきちんとパスしなければ次のステップには進みません。
 
-Each step consists of either a shell script that's executed, or a reference to an action that's run. When we talk about an action (with a lowercase "a") in this context, we mean a reusable unit of code. You can find out about actions in "[Finding and customizing actions](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions)," but for now we'll use a shell script in our workflow step.
+各ステップは、実行されるシェルスクリプトか、実行されるアクション（action）への参照のいずれかで構成されます。この文脈で「action（小文字）」と言う場合は、再利用可能なコード単位を指します。アクションについては「[Finding and customizing actions](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions)」で知ることができますが、ここではワークフローステップでシェルスクリプトを使います。
 
-Update your workflow to make it post a comment on new pull requests. It will do this using a [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) script and [GitHub CLI](https://cli.github.com/).
+ワークフローを更新して、新しいプルリクエストが作成されたときにコメントを投稿するようにしましょう。これは [bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) スクリプトと [GitHub CLI](https://cli.github.com/) を使って実現します。
 
-### :keyboard: Activity: Add a step to your workflow file
+### :keyboard: Activity: ワークフローファイルにステップを追加しよう
 
-1. Still working on the `welcome-workflow` branch, open your `welcome.yml` file.
-1. Update the contents of the file to:
+1. まだ `welcome-workflow` ブランチで作業中の状態で、`welcome.yml` ファイルを開く
+1. ファイルの内容を以下のように更新する
 
    ```yaml copy
    name: Post welcome comment
@@ -33,8 +33,8 @@ Update your workflow to make it post a comment on new pull requests. It will do 
              PR_URL: ${{ github.event.pull_request.html_url }}
    ```
 
-   **Note:** The step you've added uses GitHub CLI (`gh`) to add a comment when a pull request is opened. To allow GitHub CLI to post a comment, we set the `GITHUB_TOKEN` environment variable to the value of the `GITHUB_TOKEN` secret, which is an installation access token, created when the workflow runs. For more information, see "[Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)." We set the `PR_URL` environment variable to the URL of the newly created pull request, and we use this in the `gh` command.
-   
-1. Click **Commit changes** in the top right of the workflow editor.
-1. Type your commit message and commit your changes directly to your branch.
-1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). Another workflow will run and will replace the contents of this README file with instructions for the next step.
+   **Note:** 追加したステップは、プルリクエストが作成されたときに GitHub CLI (`gh`) を使ってコメントを追加します。GitHub CLI がコメントを投稿できるようにするために、`GITHUB_TOKEN` 環境変数を `GITHUB_TOKEN` シークレットの値に設定します。これは、ワークフローが実行されるときに作成されるインストールアクセストークンです。詳細については、「[Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication)」を参照してください。`PR_URL` 環境変数には、新しく作成されたプルリクエストの URL を設定し、`gh` コマンドで使用します。
+
+1. ワークフローエディタの右上にある **Commit changes** をクリックする
+1. コミットメッセージを入力し、変更を直接ブランチにコミットする
+1. 約 20 秒待ってから、このページを更新する（指示に従っているページ）。別のワークフローが実行され、この README ファイルの内容が次のステップの指示に置き換えられます。

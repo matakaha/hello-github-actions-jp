@@ -1,13 +1,13 @@
-## Step 4: Merge your workflow file
+## Step 4: ワークフローファイルをマージしよう
 
-_You're now able to write and run an Actions workflow! :sparkles:_
+_アクションのワークフローを作成して実行できるようになりました！ :sparkles:_
 
-Merge your changes so the action will be a part of the `main` branch.
+変更をマージして、アクションを `main` ブランチの一部にしましょう。
 
 ### :keyboard: Activity: Merge your workflow file
 
-1. In your repo, click on the **Pull requests** tab.
-1. Click on the pull request you created in step 1.
-1. Click **Merge pull request**, then click **Confirm merge**.
-1. Optionally, click **Delete branch** to delete your `welcome-workflow` branch.
-1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). Another workflow will run and will replace the contents of this README file with instructions for the next step.
+1. リポジトリで、**Pull requests** タブをクリックする
+1. ステップ 1 で作成したプルリクエストをクリックする
+1. **Merge pull request** をクリックし、次に **Confirm merge** をクリックする
+1. オプションで、**Delete branch** をクリックして `welcome-workflow` ブランチを削除する
+1. 約 20 秒待ってから、このページを更新する（指示に従っているページ）。別のワークフローが実行され、この README ファイルの内容が次のステップの指示に置き換えられます。

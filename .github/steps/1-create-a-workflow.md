@@ -1,34 +1,34 @@
-## Step 1: Create a workflow file
+## Step 1: ワークフローファイルの作成
 
 _Welcome to "Hello GitHub Actions"! :wave:_
 
-**What is _GitHub Actions_?**: GitHub Actions is a flexible way to automate nearly every aspect of your team's software workflow. You can automate testing, continuously deploy, review code, manage issues and pull requests, and much more. The best part, these workflows are stored as code in your repository and easily shared and reused across teams. To learn more, check out these resources:
+** _GitHub Actions_ とは？**: GitHub Actions は、チームのソフトウェアワークフローのほぼすべての側面を自動化する柔軟な方法を提供します。テストの自動化、継続的なデプロイ、コードのレビュー、問題の管理やプルリクエストなどを行うことができます。最も良い点は、これらのワークフローはコードとしてリポジトリに保存され、チーム間で簡単に共有して再利用できることです。詳細については、次のリソースを確認してください :
 
 - The GitHub Actions feature page, see [GitHub Actions](https://github.com/features/actions).
 - The "GitHub Actions" user documentation, see [GitHub Actions](https://docs.github.com/actions).
 
-**What is a _workflow_?**: A workflow is a configurable automated process that will run one or more jobs. Workflows are defined in special files in the `.github/workflows` directory and they execute based on your chosen event. For this exercise, we'll use a `pull_request` event.
+** _workflow_ とは？**: ワークフローとは、1つ以上のジョブを実行する構成可能な自動プロセスです。ワークフローは `.github/workflows` ディレクトリ内の特別なファイルで定義され、選択したイベントに基づいて実行されます。この演習では、`pull_request` イベントを使用します。
 
-- To read more about workflows, jobs, and events, see "[Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)".
-- If you want to learn more about the `pull_request` event before using it, see "[pull_request](https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#pull_request)".
+- ワークフロー、ジョブ、イベントについてはこちらをご確認ください : "[Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)"
+- `pull_request` イベントについて使用前に詳しく知りたい場合は、こちらをご確認ください : "[pull_request](https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#pull_request)".
 
-To get you started, we ran an Actions workflow in your new repository that, among other things, created a branch for you to work in, called `welcome-workflow`.
+演習を始めるため、新しいリポジトリでアクションワークフローを実行し、`welcome-workflow`という作業用のブランチを作成していきます。
 
-### :keyboard: Activity: Create a workflow file
+### :keyboard: Activity: ワークフローファイルを作成する
 
-1. Open a new browser tab, and navigate to this same repository. Then, work on the steps in your second tab while you read the instructions in this tab.
-1. Create a pull request. This will contain all of the changes you'll make throughout this part of the course.
+1. ブラウザで新しいタブを開き、同じリポジトリに移動します。次に、このタブの手順を読みながら、2 番目のタブの手順に取り組みます
+1. プルリクエストを作成します。これには、コースのこの部分で行うすべての変更が含まれます
 
-   Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:welcome-workflow`, click **Create pull request**, then click **Create pull request** again.
+   **Pull Requests** タブをクリックし、**New pull request** をクリックして、`base: main`と`compare:welcome-workflow`を設定し、**Create pull request** をクリックして、再び**Create pull request**をクリックします。
 
-1. Navigate to the **Code** tab.
-1. From the **main** branch dropdown, click on the **welcome-workflow** branch.
-1. Navigate to the `.github/workflows/` folder, then select **Add file** and click on **Create new file**.
-1. In the **Name your file** field, enter `welcome.yml`.
-1. Add the following content to the `welcome.yml` file:
+1. **Code**タブに移動する
+1. **main** ブランチをクリックしドロップダウンリストから **welcome-workflow** ブランチを選択する
+1. `.github/workflows/` フォルダーに移動し、**Add file** を選択、**Create new file**をクリックする
+1. **Name your file** フィールドには`welcome.yml`と入力する
+1. `welcome.yml`ファイルに次の内容を記述する :
 
    ```yaml copy
-   name: Post welcome comment
+   name: Welcome コメントの投稿
    on:
      pull_request:
        types: [opened]
@@ -36,6 +36,6 @@ To get you started, we ran an Actions workflow in your new repository that, amon
      pull-requests: write
    ```
 
-1. To commit your changes, click **Commit changes**.
-1. Type a commit message, select **Commit directly to the welcome-workflow branch** and click **Commit changes**.
-1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). A separate Actions workflow in the repository (not the workflow you created) will run and will automatically replace the contents of this README file with instructions for the next step.
+1. 変更をコミットするために、**Commit changes**をクリックする
+1. コミットメッセージを入れ、**Commit directly to the welcome-workflow branch**を選択し、**Commit changes**をクリックする
+1. 約 20 秒待ってから、このページ (指示に従っているページ) を更新します。リポジトリ内の (作成したワークフローではない) 別のアクションワークフローが実行され、この README ファイルの内容が次の手順の手順に自動的に置き換えられます

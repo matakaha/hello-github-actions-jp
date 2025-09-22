@@ -1,18 +1,18 @@
-## Step 5: Trigger the workflow
+## Step 5: ワークフローをトリガーしよう
 
-_You've now added a fully functioning workflow to your repository! :smile:_
+_アクションのワークフローを作成して実行できるようになりました！ :smile:_
 
-The shell script in the workflow will run whenever a new pull request is opened.
+ワークフロー内のシェルスクリプトは、新しいプルリクエストが作成されると実行されます。
 
-**Seeing your _action_ in action**: The status of each workflow run that's triggered is shown in the pull request before it's merged: look for **All checks have passed** when you try out the steps below. You can also see a list of all the workflows that are running, or have finished running, in the **Actions** tab of your repository. From there, you can click on each workflow run to view more details and access log files.
+**  _action_ が動作している様子を確認しよう**: トリガーされた各ワークフロー実行のステータスは、プルリクエストのマージ前に表示されます。下記の手順を試すときは **All checks have passed** を探してください。また、リポジトリの **Actions** タブで、実行中または完了したすべてのワークフローの一覧を見ることができます。そこから各ワークフロー実行をクリックして、詳細やログファイルにアクセスできます。
 
-![A screenshot of the Actions tab showing a list of workflow runs.](https://user-images.githubusercontent.com/16547949/62388049-4e64e600-b52a-11e9-8bf5-db0c5452360f.png)
+![Actionsタブのスクリーンショット。ワークフロー実行の一覧が表示されています。](https://user-images.githubusercontent.com/16547949/62388049-4e64e600-b52a-11e9-8bf5-db0c5452360f.png)
 
-### :keyboard: Activity: Trigger the workflow
+### :keyboard: Activity: ワークフローをトリガーしよう
 
-1. Make a new branch named `test-workflow`.
-1. Make a change, such as adding an emoji to your README.md file, and commit the change directly to your new branch.
-1. In the **Pull requests** tab, create a pull request that will merge `test-workflow` into `main`.
-1. Watch the workflow running in the checks section of the pull request.
-1. Notice the comment that the workflow adds to the pull request.
-1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). Another workflow will run and will replace the contents of this README file with instructions for the next step.
+1. `test-workflow` という名前の新しいブランチを作成する
+1. README.md ファイルに絵文字を追加するなどの変更を行い、新しいブランチに直接コミットする
+1. **Pull requests** タブで、`test-workflow` を `main` にマージするプルリクエストを作成する
+1. プルリクエストのチェックセクションでワークフローが実行されるのを確認する
+1. ワークフローがプルリクエストに追加するコメントに注意する
+1. 約 20 秒待ってから、このページを更新する（指示に従っているページ）。別のワークフローが実行され、この README ファイルの内容が次のステップの指示に置き換えられます。

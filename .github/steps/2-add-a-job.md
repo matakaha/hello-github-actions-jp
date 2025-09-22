@@ -1,24 +1,24 @@
-## Step 2: Add a job to your workflow file
+## Step 2: ワークフローファイルにジョブを追加する
 
-_Nice work! :tada: You added a workflow file!_
+_よくできました! :tada: workflow fileの追加に成功しました!_
 
-Here's what the entries in the `welcome.yml` file, on the `welcome-workflow` branch, mean:
+`welcome-workflow`ブランチの`welcome.yml`ファイル内のエントリの意味は次のとおりです :
 
-- `name: Post welcome comment` gives your workflow a name. This name will appear in the Actions tab of your repository.
-- `on: pull_request: types: [opened]` indicates that your workflow will execute whenever someone opens a pull request in your repository.
-- `permissions` assigns the workflow permissions to operate on the repository
-- `pull-requests: write` gives the workflow permission to write to pull requests. This is needed to create the welcome comment.
+- `name: Welcome コメントの投稿` ワークフローに名前を付けます。この名前は、リポジトリのアクションタブに表示されます 
+- `on: pull_request: types: [opened]` 誰かがプルリクエストを[開く]たびにワークフローが実行されることを示しています
+- `permissions` リポジトリ上で操作のためのワークフローの権限を割り当てます
+- `pull-requests: write` プルリクエストへの書き込み権限を付与しています（これはWelcomeコメントを作成するために必要です）
 
-Next, we need to specify jobs to run.
+続いて、実行するジョブを指定する必要があります
 
-**What is a _job_?**: A job is a set of steps in a workflow that execute on the same runner (a runner is a server that runs your workflows when triggered). Workflows have jobs, and jobs have steps. Steps are executed in order and are dependent on each other. You'll add steps to your workflow later in the course. To read more about jobs, see "[Jobs](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#jobs)".
+**_job_とは？**: ジョブは、同じランナー(トリガーされたときにワークフローを実行するサーバー)上で実行されるワークフロー内の一連のステップです。トリガー(例:誰かがプルリクエストを[開く])されたワークフローはランナー上で動き、そのワークフローにはジョブがあり、ジョブにはステップがあります。ステップは順番に実行され、相互依存しています。この演習の後半でワークフローにステップを追加します。ジョブの詳細については、「[Jobs](https://docs.github.com/en/actions/learn-github-actions/Understanding-github-actions#jobs)」を参照してください。
 
-In the following activity, you'll add a "build" job to your workflow. You'll specify `ubuntu-latest` as the fastest, and cheapest, job runner available. If you want to read more about why we'll use that runner, see the code explanation for the line `runs-on: ubuntu-latest` in the "[Understanding the workflow file](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#understanding-the-workflow-file)" article.
+次のアクティビティでは、作成したワークフローに"build"ジョブを追加します。利用可能で高速でコストの安い `ubuntu-latest`ジョブランナーを指定します。なぜこのランナーを利用するのかについて詳しく知りたい方は、こちらの記事"[Understanding the workflow file](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#understanding-the-workflow-file)"の中の`runs-on: ubuntu-latest`の部分に説明されていますのでご確認ください。
 
-### :keyboard: Activity: Add a job to your workflow file
+### :keyboard: Activity: ワークフローファイルにジョブを追加する
 
-1. In a separate browser tab, make sure you are on the `welcome-workflow` branch and open your `.github/workflows/welcome.yml` file.
-1. Edit the file and update its contents to:
+1. ブラウザの別タブで`welcome-workflow`ブランチにいることを確認し、`.github/workflows/welcome.yml`ファイルを開く
+1. ファイルの中身を以下のように更新する :
 
    ```yaml copy
    name: Post welcome comment
@@ -33,6 +33,6 @@ In the following activity, you'll add a "build" job to your workflow. You'll spe
        runs-on: ubuntu-latest
    ```
 
-1. Click **Commit changes** in the top right of the workflow editor.
-1. Type a commit message and commit your changes directly to the `welcome-workflow` branch.
-1. Wait about 20 seconds, then refresh this page (the one you're following instructions from). Another workflow will run and will replace the contents of this README file with instructions for the next step.
+1. ワークフローエディタの右上にある**Commit changes**をクリックする
+1. コミットメッセージを書き、`welcome-workflow`ブランチに対して直接コミットする
+1. 約20秒待ってからこのページ (指示に従っているページ) を更新する。別のワークフローが実行され、この README ファイルの内容が次のステップの手順に置き換えられます
