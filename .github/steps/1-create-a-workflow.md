@@ -16,7 +16,7 @@ _Welcome to "Hello GitHub Actions"! :wave:_
 
 ### :keyboard: Activity: ワークフローファイルを作成する
 
-1. ブラウザで新しいタブを開き、同じリポジトリに移動します。次に、このタブの手順を読みながら、2 番目のタブの手順に取り組みます
+1. ブラウザで新しいタブを開き、同じリポジトリに移動します。次に、このタブの手順を読みながら、2 番目のタブで以下の手順に取り組みます
 1. プルリクエストを作成します。これには、コースのこの部分で行うすべての変更が含まれます
 
    **Pull Requests** タブをクリックし、**New pull request** をクリックして、`base: main`と`compare:welcome-workflow`を設定し、**Create pull request** をクリックして、再び**Create pull request**をクリックします。
