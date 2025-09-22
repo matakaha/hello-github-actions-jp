@@ -11,7 +11,7 @@ _よくできました! :tada: workflow fileの追加に成功しました!_
 
 続いて、実行するジョブを指定する必要があります
 
-**_job_とは？**: ジョブは、同じランナー(トリガーされたときにワークフローを実行するサーバー)上で実行されるワークフロー内の一連のステップです。トリガー(例:誰かがプルリクエストを[開く])されたワークフローはランナー上で動き、そのワークフローにはジョブがあり、ジョブにはステップがあります。ステップは順番に実行され、相互依存しています。この演習の後半でワークフローにステップを追加します。ジョブの詳細については、「[Jobs](https://docs.github.com/en/actions/learn-github-actions/Understanding-github-actions#jobs)」を参照してください。
+**_job_ とは？**: ジョブは、同じランナー(トリガーされたときにワークフローを実行するサーバー)上で実行されるワークフロー内の一連のステップです。トリガー(例:誰かがプルリクエストを[開く])されたワークフローはランナー上で動き、そのワークフローにはジョブがあり、ジョブにはステップがあります。ステップは順番に実行され、相互依存しています。この演習の後半でワークフローにステップを追加します。ジョブの詳細については、「[Jobs](https://docs.github.com/en/actions/learn-github-actions/Understanding-github-actions#jobs)」を参照してください。
 
 次のアクティビティでは、作成したワークフローに"build"ジョブを追加します。利用可能で高速でコストの安い `ubuntu-latest`ジョブランナーを指定します。なぜこのランナーを利用するのかについて詳しく知りたい方は、こちらの記事"[Understanding the workflow file](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#understanding-the-workflow-file)"の中の`runs-on: ubuntu-latest`の部分に説明されていますのでご確認ください。
 
