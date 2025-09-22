@@ -28,7 +28,7 @@ _Welcome to "Hello GitHub Actions"! :wave:_
 1. `welcome.yml`ファイルに次の内容を記述する :
 
    ```yaml copy
-   name: Welcome コメントの投稿
+   name: Post welcome comment
    on:
      pull_request:
        types: [opened]
