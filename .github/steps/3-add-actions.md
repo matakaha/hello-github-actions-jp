@@ -16,7 +16,7 @@ _ワークフローにジョブを追加することができましたね！ 素
 1. ファイルの内容を以下のように更新する
 
    ```yaml copy
-   name: Post welcome comment
+   name: Welcome コメントの投稿
    on:
      pull_request:
        types: [opened]
@@ -27,7 +27,7 @@ _ワークフローにジョブを追加することができましたね！ 素
        name: Post welcome comment
        runs-on: ubuntu-latest
        steps:
-         - run: gh pr comment $PR_URL --body "Welcome to the repository!"
+         - run: gh pr comment $PR_URL --body "Welcome to the repository!リポジトリへようこそ！"
            env:
              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
              PR_URL: ${{ github.event.pull_request.html_url }}
